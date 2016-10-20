@@ -38,35 +38,7 @@ If you are going to configure your VM as a KMS client, you can use the product k
 
 ### Windows Updates
 
-The scripts in this repo will install all Windows updates – by default – during Windows Setup. This is a _very_ time consuming process, depending on the age of the OS and the quantity of updates released since the last service pack. You might want to do yourself a favor during development and disable this functionality, by commenting out the `WITH WINDOWS UPDATES` section and uncommenting the `WITHOUT WINDOWS UPDATES` section in `Autounattend.xml`:
-
-```xml
-<!-- WITHOUT WINDOWS UPDATES -->
-<SynchronousCommand wcm:action="add">
-    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\cygwin.ps1</CommandLine>
-    <Description>Install Cygwin</Description>
-    <Order>99</Order>
-    <RequiresUserInput>true</RequiresUserInput>
-</SynchronousCommand>
-<!-- END WITHOUT WINDOWS UPDATES -->
-<!-- WITH WINDOWS UPDATES -->
-<!--
-<SynchronousCommand wcm:action="add">
-    <CommandLine>cmd.exe /c a:\microsoft-updates.bat</CommandLine>
-    <Order>98</Order>
-    <Description>Enable Microsoft Updates</Description>
-</SynchronousCommand>
-<SynchronousCommand wcm:action="add">
-    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\win-updates.ps1</CommandLine>
-    <Description>Install Windows Updates</Description>
-    <Order>100</Order>
-    <RequiresUserInput>true</RequiresUserInput>
-</SynchronousCommand>
--->
-<!-- END WITH WINDOWS UPDATES -->
-```
-
-Doing so will give you hours back in your day, which is a good thing.
+The scripts in this repo do not install Windows updates during Windows Setup.
 
 ### OpenSSH / WinRM
 
@@ -99,7 +71,7 @@ Alternatively – if you have access to [MSDN](http://msdn.microsoft.com) or [Te
 3. Clone this repo to a local directory
 4. Move `en_windows_server_2008_r2_with_sp1_x64_dvd_617601.iso` to the `iso` directory
 5. Run:
-    
+
     ```
     packer build \
         -var iso_url=./iso/en_windows_server_2008_r2_with_sp1_x64_dvd_617601.iso \

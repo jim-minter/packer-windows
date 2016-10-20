@@ -16,8 +16,6 @@
       "vnc_port_max": 5980,
       "floppy_files": [
         "{{user `autounattend`}}",
-        "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
         "./scripts/cygwin.ps1"
       ],
       "disk_interface": "ide",
@@ -41,8 +39,6 @@
       "vnc_port_max": 5980,
       "floppy_files": [
         "{{user `autounattend`}}",
-        "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
         "./scripts/cygwin.ps1"
       ],
       "vmx_data": {
@@ -68,8 +64,6 @@
       "disk_size": 61440,
       "floppy_files": [
         "{{user `autounattend`}}",
-        "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
         "./scripts/cygwin.ps1",
         "./scripts/oracle-cert.cer"
       ],
@@ -98,9 +92,7 @@
         "./scripts/vm-guest-tools.bat",
         "./scripts/vagrant-ssh.bat",
         "./scripts/enable-rdp.bat",
-        "./scripts/compile-dotnet-assemblies.bat",
-        "./scripts/disable-auto-logon.bat",
-        "./scripts/compact.bat"
+        "./scripts/disable-auto-logon.bat"
       ]
     }
   ],

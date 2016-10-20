@@ -267,29 +267,12 @@
                     <Order>28</Order>
                     <Description>Disable password expiration for vagrant user</Description>
                 </SynchronousCommand>
-                <!-- WITHOUT WINDOWS UPDATES -->
-                <!--
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\cygwin.ps1</CommandLine>
                     <Description>Install Cygwin</Description>
                     <Order>99</Order>
                     <RequiresUserInput>true</RequiresUserInput>
                 </SynchronousCommand>
-                -->
-                <!-- END WITHOUT WINDOWS UPDATES -->
-                <!-- WITH WINDOWS UPDATES -->
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c a:\microsoft-updates.bat</CommandLine>
-                    <Order>98</Order>
-                    <Description>Enable Microsoft Updates</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\win-updates.ps1</CommandLine>
-                    <Description>Install Windows Updates</Description>
-                    <Order>100</Order>
-                    <RequiresUserInput>true</RequiresUserInput>
-                </SynchronousCommand>
-                <!-- END WITH WINDOWS UPDATES -->
             </FirstLogonCommands>
             <ShowWindowsLive>false</ShowWindowsLive>
         </component>
@@ -301,7 +284,7 @@
             </OEMInformation>
             <!-- Rename computer here. -->
             <ComputerName>vagrant-2008R2</ComputerName>
-            <TimeZone>Pacific Standard Time</TimeZone>
+            <TimeZone>GMT Standard Time</TimeZone>
             <RegisteredOwner/>
         </component>
         <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-ServerManager-SvrMgrNc" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
