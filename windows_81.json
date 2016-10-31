@@ -18,7 +18,7 @@
         "{{user `autounattend`}}",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
-        "./scripts/openssh.ps1"
+        "./scripts/cygwin.ps1"
       ],
       "disk_interface": "ide",
       "net_device": "e1000"
@@ -43,7 +43,7 @@
         "{{user `autounattend`}}",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
-        "./scripts/openssh.ps1"
+        "./scripts/cygwin.ps1"
       ],
       "vmx_data": {
         "RemoteDisplay.vnc.enabled": "false",
@@ -70,7 +70,7 @@
         "{{user `autounattend`}}",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
-        "./scripts/openssh.ps1",
+        "./scripts/cygwin.ps1",
         "./scripts/oracle-cert.cer"
       ],
       "vboxmanage": [
@@ -93,7 +93,7 @@
     {
       "type": "shell",
       "remote_path": "/tmp/script.bat",
-      "execute_command": "{{.Vars}} cmd /c C:/Windows/Temp/script.bat",
+      "execute_command": "{{.Vars}} cmd /c C:/Cygwin/Tmp/script.bat",
       "scripts": [
         "./scripts/vm-guest-tools.bat",
         "./scripts/vagrant-ssh.bat",

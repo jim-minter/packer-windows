@@ -43,8 +43,8 @@ The scripts in this repo will install all Windows updates – by default – dur
 ```xml
 <!-- WITHOUT WINDOWS UPDATES -->
 <SynchronousCommand wcm:action="add">
-    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\openssh.ps1 -AutoStart</CommandLine>
-    <Description>Install OpenSSH</Description>
+    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\cygwin.ps1</CommandLine>
+    <Description>Install Cygwin</Description>
     <Order>99</Order>
     <RequiresUserInput>true</RequiresUserInput>
 </SynchronousCommand>
@@ -55,12 +55,6 @@ The scripts in this repo will install all Windows updates – by default – dur
     <CommandLine>cmd.exe /c a:\microsoft-updates.bat</CommandLine>
     <Order>98</Order>
     <Description>Enable Microsoft Updates</Description>
-</SynchronousCommand>
-<SynchronousCommand wcm:action="add">
-    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\openssh.ps1</CommandLine>
-    <Description>Install OpenSSH</Description>
-    <Order>99</Order>
-    <RequiresUserInput>true</RequiresUserInput>
 </SynchronousCommand>
 <SynchronousCommand wcm:action="add">
     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\win-updates.ps1</CommandLine>
